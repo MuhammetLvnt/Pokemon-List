@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -28,9 +28,14 @@ function Stats() {
   }, []);
 
   return (
-    <div className="text-center">
-      <h1 className="mt-4">STATS</h1>
-      <div className="container border flex">
+    <div>
+      <div className="mt-2  ml-5">
+        <Link to="/">
+          <i className="fa-solid fa-circle-chevron-left"></i>
+        </Link>
+        <h1 className="text-center">STATS</h1>
+      </div>
+      <div className="container border flex mt-5">
         <div>
           <div>
             <img
@@ -50,7 +55,7 @@ function Stats() {
             </label>
           </div>
         </div>
-        <div className="grid grid-rows-6  gap-4">
+        <div className="grid grid-rows-6 gap-4 ml-5">
           <label>HP</label>
           <label>ATTACK</label>
           <label>DEFENSE</label>

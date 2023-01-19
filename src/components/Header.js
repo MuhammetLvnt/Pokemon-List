@@ -21,18 +21,14 @@ function Header() {
     <div>
       <div className="flex justify-center">
         <h1 className="text-4xl font-bold text-white mt-5">POKEMON LİST</h1>
-        <div className="flex justify-center mt-5">
-          <form className="flex items-center">
-            <label htmlFor="simple-search" className="sr-only">
-              Search
-            </label>
-            <input
-              type="text"
-              placeholder="aaa"
-              onChange={(e) => setValue(e.target.value)}
-            ></input>
-          </form>
-        </div>
+      </div>
+      <div className="mt-5 text-center">
+        <input
+          type="text"
+          placeholder="Pokemon Ara"
+          className="rounded-md h-8 w-64"
+          onChange={(e) => setValue(e.target.value)}
+        ></input>
       </div>
       <Pagination item={value} pokemons={pokemons} />
     </div>
